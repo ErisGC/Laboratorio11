@@ -8,8 +8,16 @@
 <body>
     <script>
         let Calificacion = parseInt(prompt("Ingrese una calificación (Se permite entre 0 y 100):\n"));
-        if (Calificacion > 90){
+        while(Calificacion < 0 || Calificacion > 100){
+            console.log("Debe estar dentro del rango indicado");
+            Calificacion = parseInt(prompt("Ingrese una calificación (Se permite entre 0 y 100):\n"));
+        }
+        if (Calificacion >= 90){
             console.log("Aprobado con Honores");
+        }else if (Calificacion < 90 && Calificacion >= 70){
+            console.log("Aprobado");
+        }else {
+            console.log("Reprobado");
         }
     </script>
 </body>
